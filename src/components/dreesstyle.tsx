@@ -36,7 +36,7 @@ import { Button } from "./ui/button"
         <AccordionItem value="item-4">
           <AccordionTrigger>Party</AccordionTrigger>
           <AccordionContent>
-            Yes. It's animated by default, but you can disable it if you prefer.
+            Yes. It is animated by default, but you can disable it if you prefer.
           </AccordionContent>
           <Button className="w-full rounded-[20px]">Apply Filter</Button>
         </AccordionItem>

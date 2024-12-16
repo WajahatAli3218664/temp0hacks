@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
+import * as React from "react";
+import Link from "next/link";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 // import { Icons } from "@/components/icons"
 import {
   NavigationMenu,
@@ -13,11 +13,10 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-import { RiArrowDropDownLine } from "react-icons/ri"
+} from "@/components/ui/navigation-menu";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const components: { title: string; href: string; description: string }[] = [
- 
   {
     title: "casual",
     href: "/casual",
@@ -41,35 +40,29 @@ const components: { title: string; href: string; description: string }[] = [
     description:
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
-]
+];
 
 export function NavigationMenuDemo() {
   return (
     <NavigationMenu>
-      <NavigationMenuList>         
+      <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-md ">
-            Shop 
-          </NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-md ">Shop</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid  sm:w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="grid sm:w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {components.map((component) => (
-              <Link href={component.href} >
-                   <ListItem
-                  key={component.title}
-                  title={component.title}
-                >
-                  {component.description}
-                </ListItem>
-              </Link>
+                <Link href={component.href} key={component.title}>
+                  <ListItem title={component.title}>
+                    {component.description}
+                  </ListItem>
+                </Link>
               ))}
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        
       </NavigationMenuList>
     </NavigationMenu>
-  )
+  );
 }
 
 const ListItem = React.forwardRef<
@@ -94,6 +87,6 @@ const ListItem = React.forwardRef<
         </a>
       </NavigationMenuLink>
     </li>
-  )
-})
-ListItem.displayName = "ListItem"
+  );
+});
+ListItem.displayName = "ListItem";

@@ -1,4 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+const nextConfig = {
+    reactStrictMode: true, // Optional, but recommended
+    experimental: {
+      fontLoaders: [
+        {
+          loader: '@next/font/google', // Enables Google Fonts usage with `next/font`
+          options: { subsets: ['latin'] }, // Specify subsets for better performance
+        },
+      ],
+    },
+  };
+  
+  export default nextConfig;
+  
